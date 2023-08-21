@@ -32,7 +32,7 @@ option(PYTHON "Enable Python bindings" OFF)
 option(CSHARP "Enable C# bindings" OFF)
 option(COVERAGE "Enable gcov coverage" OFF)
 option(EXAMPLES "Enable examples" ON)
-set(PYTHON_CONFIG "python3-config" CACHE STRING "python-config for build env config")
+set(PYTHON_CONFIG "python2-config" CACHE STRING "python-config for build env config")
 
 # set version info
 set(CONFIG_MAJOR_VERSION 0)
