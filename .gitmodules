@@ -3,10 +3,12 @@
 	url = https://github.com/google/googletest.git
 [submodule "ext/utils"]
 	path = ext/utils
-    url = https://github.com/Version1/utils.git
+	url = https://github.com/Version1/utils.git
+	branch = main
 [submodule "ext/sbf"]
 	path = ext/sbf
-    url = https://github.com/Version1/sbf.git
+	url = https://github.com/Version1/sbf.git
+	branch = main
 [submodule "ext/libevent"]
 	path = ext/libevent
 	url = https://github.com/libevent/libevent.git
