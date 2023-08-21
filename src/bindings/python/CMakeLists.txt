@@ -46,16 +46,18 @@ set(CMAKE_SWIG_FLAGS -module properties)
 set_source_files_properties(../properties.py.i PROPERTIES CPLUSPLUS ON)
 
 # Add swig module
-swig_add_module(Conf python ../properties.py.i)
+swig_add_library(Conf
+    LANGUAGE python 
+    SOURCES ../properties.py.i)
 swig_link_libraries(Conf properties ${PYTHON_LIBS})
-set_target_properties(_Conf PROPERTIES OUTPUT_NAME "_properties")
+set_target_properties(${SWIG_MODULE_Conf_REAL_NAME} PROPERTIES OUTPUT_NAME "_properties")
 
 # Files to install with Python
 set(PYTHON_INSTALL_FILES
   # ${CMAKE_CURRENT_SOURCE_DIR}/example.py
   ${CMAKE_CURRENT_BINARY_DIR}/properties.py)
 
-install(TARGETS _Conf
+install(TARGETS ${SWIG_MODULE_Conf_REAL_NAME}
         DESTINATION lib/python)
 install(FILES ${PYTHON_INSTALL_FILES}
         DESTINATION lib/python)
